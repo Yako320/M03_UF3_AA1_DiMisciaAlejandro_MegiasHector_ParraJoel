@@ -21,5 +21,5 @@ void InputJugador(char tablero[MAX][MAX]) {
 			rompebucles = true;
 		}
 	}
-	tablero[inputX][inputY] = 'X';
+	tablero[inputX][inputY] = jugador;
 }

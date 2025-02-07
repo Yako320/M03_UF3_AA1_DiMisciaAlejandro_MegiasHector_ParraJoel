@@ -15,5 +15,5 @@ void IA_Jugador(char tablero[MAX][MAX]) {
 		}
 	}
 	std::cout << "La IA ha jugado su ficha en X: " << x << " Y: " << y << std::endl;
-	tablero[x][y] = 'O';
+	tablero[x][y] = ia;
 }

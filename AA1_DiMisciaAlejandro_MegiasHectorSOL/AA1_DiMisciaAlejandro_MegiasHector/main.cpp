@@ -2,6 +2,7 @@
 #include "tablero.h"
 #include "input.h"
 #include "ia.h"
+#include "comprobante.h"
 
 void main() {
 
@@ -24,6 +25,31 @@ void main() {
 		
 		//Una vez puesta la ficha del jugador es hora de la IA
 		IA_Jugador(tablero);
+
+
+		//Cada turno hacemos las comprobaciones para ver si se ha acabado el juego
+		if (Victoria(tablero))
+		{
+			system("CLS");
+			MostrarTablero(tablero);
+			std::cout << "El ganador del 3 en raya es el Jugador! Enhorabuena!";
+			gameOver = true;
+		}
+		else if (VictoriaIA(tablero))
+		{
+			system("CLS");
+			MostrarTablero(tablero);
+			std::cout << "El ganador del 3 en raya es la IA... Mucha suerte para la proxima vez";
+			gameOver = true;
+		}
+		else if (TableroLleno(tablero))
+		{
+			system("CLS");
+			MostrarTablero(tablero);
+			std::cout << "El tablero esta lleno, es un empate!";
+			gameOver = true;
+		}
+
 	}
 	
 }
