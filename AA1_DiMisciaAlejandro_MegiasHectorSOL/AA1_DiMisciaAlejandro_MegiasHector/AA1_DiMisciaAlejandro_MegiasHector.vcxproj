@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="comprobante.cpp" />
+    <ClCompile Include="guardar-partida.cpp" />
     <ClCompile Include="ia.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
