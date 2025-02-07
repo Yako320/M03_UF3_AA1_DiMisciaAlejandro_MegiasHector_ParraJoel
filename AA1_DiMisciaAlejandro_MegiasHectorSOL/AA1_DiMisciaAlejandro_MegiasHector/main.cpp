@@ -22,9 +22,20 @@ void main() {
 
 		//Le pedimos el input al usuario
 		InputJugador(tablero);
-		
-		//Una vez puesta la ficha del jugador es hora de la IA
-		IA_Jugador(tablero);
+
+		//Comprobamos si el tablero esta lleno
+		if (TableroLleno(tablero))
+		{
+			system("CLS");
+			MostrarTablero(tablero);
+			std::cout << "El tablero esta lleno, es un empate!";
+			gameOver = true;
+		}
+		else 
+		{
+			//Una vez puesta la ficha del jugador es hora de la IA
+			IA_Jugador(tablero);
+		}
 
 
 		//Cada turno hacemos las comprobaciones para ver si se ha acabado el juego
@@ -42,14 +53,5 @@ void main() {
 			std::cout << "El ganador del 3 en raya es la IA... Mucha suerte para la proxima vez";
 			gameOver = true;
 		}
-		else if (TableroLleno(tablero))
-		{
-			system("CLS");
-			MostrarTablero(tablero);
-			std::cout << "El tablero esta lleno, es un empate!";
-			gameOver = true;
-		}
-
 	}
-	
 }
