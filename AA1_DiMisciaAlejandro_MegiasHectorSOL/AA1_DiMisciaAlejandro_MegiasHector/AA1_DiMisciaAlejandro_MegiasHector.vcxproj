@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ia.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="tablero.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ia.h" />
     <ClInclude Include="input.h" />
     <ClInclude Include="tablero.h" />
     <ClInclude Include="utils.h" />
