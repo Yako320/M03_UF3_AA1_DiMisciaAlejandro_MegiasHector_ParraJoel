@@ -10,7 +10,7 @@ void InputJugador(char tablero[MAX][MAX]) {
 		std::cin >> inputX;
 		std::cout << "Introduce una posicion verticla: " << std::endl;
 		std::cin >> inputY;
-		if (inputX < 0 || inputX == MAX || inputY < 0 || inputY == MAX) {
+		if (inputX < 0 || inputX >= MAX || inputY < 0 || inputY >= MAX) {
 			std::cout << "La posicion introducida no es valida. Introduce una nueva posicion: " << std::endl;
 		}
 		else if (tablero[inputX][inputY] != ' ') {
