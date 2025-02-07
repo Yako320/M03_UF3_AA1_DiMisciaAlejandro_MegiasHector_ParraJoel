@@ -1,5 +1,5 @@
 #pragma once
 #include "utils.h"
 
-void CrearTablero(char tablero[MAXH][MAXV]);
-void MostrarTablero(char tablero[MAXH][MAXV]);
+void CrearTablero(char tablero[MAX][MAX]);
+void MostrarTablero(char tablero[MAX][MAX]);

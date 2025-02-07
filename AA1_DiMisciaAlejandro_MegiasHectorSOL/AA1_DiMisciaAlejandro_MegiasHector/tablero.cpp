@@ -1,11 +1,11 @@
 #include <iostream>
 #include "utils.h"
 
-void CrearTablero(char tablero[MAXH][MAXV]) {
+void CrearTablero(char tablero[MAX][MAX]) {
 
-	for (int i = 0; i < MAXV; i++)
+	for (int i = 0; i < MAX; i++)
 	{
-		for (int j = 0; j < MAXH; j++)
+		for (int j = 0; j < MAX; j++)
 		{
 			tablero[j][i] = ' ';
 		}
@@ -13,14 +13,14 @@ void CrearTablero(char tablero[MAXH][MAXV]) {
 
 }
 
-void MostrarTablero(char tablero[MAXH][MAXV]) {
+void MostrarTablero(char tablero[MAX][MAX]) {
 
 	for (int i = 0; i < MAXVPRINT; i++)
 	{
-		short contador = 0;
+		short contador = i / 2;
 		if (i % 2)
 		{
-			for (int j = 0; j < MAXH; j++)
+			for (int j = 0; j < MAX; j++)
 			{
 				std::cout << '|';
 				std::cout << ' ';
